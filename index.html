@@ -67,13 +67,7 @@
     .toolbar-button:hover { background: #eaece7; border-color: #9da9aa; }
     .toolbar-button.primary { border-color: var(--ink); background: var(--ink); color: #fff; }
     .toolbar-button.primary:hover { background: #314d5e; border-color: #314d5e; }
-    .content-grid { display: grid; grid-template-columns: 202px minmax(0, 1fr); align-items: start; gap: 38px; }
-    .sidebar { position: sticky; top: 30px; padding-top: 3px; }
     .section-label { margin: 0; font-size: 11px; font-weight: 700; line-height: 1.5; letter-spacing: .15em; text-transform: uppercase; color: var(--ink); }
-    .sidebar-rule { width: 28px; height: 2px; background: var(--accent); margin: 16px 0; }
-    .sidebar-text { font-size: 12px; color: var(--muted); line-height: 1.75; margin: 0 0 19px; }
-    .sidebar-text strong { font-weight: 600; color: var(--text); }
-    .range-label { color: #596970; font: 12px/1.5 var(--mono); }
     .list-area { min-width: 0; }
     .list-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; margin: 0 0 16px; }
     .list-heading h2 { font-size: 12px; font-weight: 600; color: var(--muted); margin: 0; }
@@ -109,17 +103,14 @@
     @media screen and (min-width: 1700px) {
       body { zoom: 1.5; }
       .shell { width: min(1152px, calc(100% - 96px)); }
-      .content-grid { gap: 38px; }
     }
     @media screen and (min-width: 1450px) and (max-width: 1699px) {
       .shell { width: 1180px; }
-      .content-grid { gap: 52px; }
     }
     @media (max-width: 950px) {
       .shell { width: calc(100% - 56px); }
       .hero { grid-template-columns: 1fr 185px; gap: 25px; }
       .collection-meta { padding-left: 20px; }
-      .content-grid { grid-template-columns: 160px minmax(0, 1fr); gap: 25px; }
       .reference-content h3 { font-size: 20px; }
     }
     @media (max-width: 740px) {
@@ -139,9 +130,6 @@
       .toolbar { gap: 10px; margin-bottom: 26px; padding: 15px 0; }
       .search-wrap { flex-basis: 100%; }
       .toolbar-button { flex: 1; }
-      .content-grid { display: block; }
-      .sidebar { position: static; display: flex; gap: 15px; justify-content: space-between; align-items: baseline; padding: 0 0 20px; }
-      .sidebar-rule, .sidebar-text { display: none; }
       .list-heading { margin-bottom: 12px; }
       .reference-item { grid-template-columns: 29px minmax(0, 1fr); gap: 12px; padding: 23px 0; }
       .reference-number { font-size: 13px; }
@@ -175,8 +163,7 @@
       h1 { font-size: 37pt; margin-bottom: 6pt; }
       .hero-subtitle { font-size: 17pt; }
       .hero-caption { font-size: 9pt; margin-top: 8pt; }
-      .collection-meta, .toolbar, .sidebar, .back-to-top, .toast, .skip-link, .noscript-note, .external-icon, .empty-state, .result-count { display: none !important; }
-      .content-grid { display: block; }
+      .collection-meta, .toolbar, .back-to-top, .toast, .skip-link, .noscript-note, .external-icon, .empty-state, .result-count { display: none !important; }
       .list-heading { margin: 0 0 8pt; }
       .list-heading h2 { font-size: 8pt; }
       .reference-list { border-top: 1px solid #aaa; }
@@ -232,14 +219,7 @@
         <button class="toolbar-button primary" id="print-references" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 8V3h10v5M7 16H4V9h16v7h-3"/><path d="M7 13h10v8H7zM17 11h1"/></svg><span>Print all</span></button>
       </div>
       <noscript><p class="noscript-note">All references are displayed below. Use your browser’s Print command to print this page.</p></noscript>
-      <div class="content-grid">
-        <aside class="sidebar" aria-label="About this collection">
-          <div><p class="section-label">Reference index</p><div class="sidebar-rule"></div></div>
-          <p class="sidebar-text">Browse the complete list. Every supplied <strong>source URL is displayed in full</strong> beneath its entry.</p>
-          <p class="sidebar-text">Links open in a new tab. Citation details are presented as supplied, not independently verified.</p>
-          <span class="range-label">01 — 23</span>
-        </aside>
-        <section class="list-area" id="references" aria-labelledby="references-heading">
+      <section class="list-area" id="references" aria-labelledby="references-heading">
           <div class="list-heading"><h2 id="references-heading">Reference entries</h2><span class="result-count" id="result-count" role="status" aria-live="polite" aria-atomic="true">Showing all 23 references</span></div>
           <ol class="reference-list" id="reference-list" role="list">
 <li class="reference-item" id="ref-1" aria-labelledby="ref-title-1">
@@ -547,8 +527,7 @@
             <p>Reference entries have been numbered sequentially. Supplied titles, bibliographic details, descriptions, repeated entries, and URL-only entries have been retained. Link-only entries have descriptive source labels, not verified article titles.</p>
             <p><strong>This is a presentation of the supplied references, not a verified bibliography.</strong> Authors, publication dates, article titles, and title–link matches have not been independently checked. One entry did not include a URL.</p>
           </aside>
-        </section>
-      </div>
+      </section>
     </main>
     <footer class="page-footer"><p>Cross-cultural adaptation &amp; measurement validation</p><a class="back-to-top" href="#top">Back to top ↑</a></footer>
   </div>

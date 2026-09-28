@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="An annotated reference collection on cross-cultural adaptation, translation, and measurement validation, with fully visible source URLs.">
+  <title>References | Cross-cultural Adaptation &amp; Validation</title>
+  <style>
+    :root {
+      --paper: #f8f7f3;
+      --white: #ffffff;
+      --ink: #1c2e3b;
+      --text: #32424d;
+      --muted: #5f6c74;
+      --line: #dcded9;
+      --accent: #986c37;
+      --link: #235867;
+      --link-bg: #f3f6f5;
+      --focus: #155e75;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+    body { margin: 0; background: var(--paper); color: var(--text); font: 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    button svg { width: 17px; height: 17px; flex-shrink: 0; }
+    a { color: var(--link); }
+    a:hover { color: var(--ink); }
+    a, button, input { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; border-radius: 3px; }
+    [hidden] { display: none !important; }
+    ::selection { color: var(--ink); background: #e5d6bb; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .skip-link { position: absolute; top: -90px; left: 20px; z-index: 10; padding: 10px 16px; background: white; border: 1px solid var(--ink); }
+    .skip-link:focus { top: 12px; }
+    .shell { width: min(1152px, calc(100% - 96px)); margin-inline: auto; }
+    .masthead { border-bottom: 1px solid var(--line); padding: 27px 0; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 13px; color: var(--ink); }
+    .brand-mark { width: 31px; height: 37px; border: 1px solid var(--ink); display: grid; place-items: center; font: 23px/1 var(--serif); position: relative; }
+    .brand-mark::after { content: ""; width: 10px; height: 3px; position: absolute; top: -2px; right: 4px; background: var(--accent); }
+    .brand-name { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    .masthead-meta { font-size: 11px; text-transform: uppercase; letter-spacing: .13em; color: var(--muted); }
+    .hero { display: grid; grid-template-columns: 1fr 225px; gap: 54px; align-items: end; padding: 52px 0 42px; }
+    .eyebrow { margin: 0 0 14px; color: var(--accent); font-size: 11px; line-height: 1.5; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    h1 { margin: 0 0 13px; font-family: var(--serif); font-size: clamp(48px, 6.4vw, 74px); letter-spacing: -.052em; line-height: 1.07; font-weight: 400; color: var(--ink); }
+    .hero-subtitle { margin: 0; font-family: var(--serif); font-size: clamp(22px, 2.25vw, 28px); line-height: 1.4; color: #40525c; letter-spacing: -.022em; }
+    .hero-caption { margin: 15px 0 0; color: var(--muted); font-size: 14px; max-width: 650px; }
+    .collection-meta { border-left: 1px solid #c9cdc8; padding-left: 25px; padding-bottom: 3px; }
+    .collection-meta .meta-heading { font-size: 10px; line-height: 1.5; font-weight: 700; text-transform: uppercase; letter-spacing: .17em; color: var(--muted); margin: 0 0 15px; }
+    .count-row { display: flex; gap: 25px; }
+    .count-row p { margin: 0; }
+    .count-value { display: block; font: 37px/1.12 var(--serif); letter-spacing: -.04em; color: var(--ink); }
+    .count-label { display: block; font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .meta-note { margin: 13px 0 0; color: var(--muted); font-size: 11px; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 35px; }
+    .search-wrap { position: relative; flex: 1 1 320px; }
+    .search-icon { width: 18px; height: 18px; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+    .search { width: 100%; height: 44px; padding: 0 44px 0 42px; border: 1px solid #d5dad7; border-radius: 5px; background: var(--white); color: var(--ink); font-size: 13px; }
+    .search::placeholder { color: #64717a; opacity: 1; }
+    .clear-search { position: absolute; right: 2px; top: 2px; height: 40px; width: 40px; border: 0; background: transparent; color: var(--muted); display: grid; place-items: center; }
+    .search::-webkit-search-cancel-button { -webkit-appearance: none; }
+    .toolbar-button { min-height: 44px; border: 1px solid #cbd1cf; border-radius: 5px; padding: 0 16px; background: transparent; display: inline-flex; align-items: center; justify-content: center; gap: 9px; color: var(--ink); font-size: 12px; font-weight: 600; transition: background-color .15s, border-color .15s; }
+    .toolbar-button:hover { background: #eaece7; border-color: #9da9aa; }
+    .toolbar-button.primary { border-color: var(--ink); background: var(--ink); color: #fff; }
+    .toolbar-button.primary:hover { background: #314d5e; border-color: #314d5e; }
+    .content-grid { display: grid; grid-template-columns: 202px minmax(0, 1fr); align-items: start; gap: 38px; }
+    .sidebar { position: sticky; top: 30px; padding-top: 3px; }
+    .section-label { margin: 0; font-size: 11px; font-weight: 700; line-height: 1.5; letter-spacing: .15em; text-transform: uppercase; color: var(--ink); }
+    .sidebar-rule { width: 28px; height: 2px; background: var(--accent); margin: 16px 0; }
+    .sidebar-text { font-size: 12px; color: var(--muted); line-height: 1.75; margin: 0 0 19px; }
+    .sidebar-text strong { font-weight: 600; color: var(--text); }
+    .range-label { color: #596970; font: 12px/1.5 var(--mono); }
+    .list-area { min-width: 0; }
+    .list-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; margin: 0 0 16px; }
+    .list-heading h2 { font-size: 12px; font-weight: 600; color: var(--muted); margin: 0; }
+    .result-count { font-size: 11px; color: var(--muted); text-align: right; }
+    .reference-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+    .reference-item { display: grid; grid-template-columns: 37px minmax(0, 1fr); gap: 16px; padding: 26px 0 27px; border-bottom: 1px solid var(--line); }
+    .reference-number { padding-top: 3px; font: 15px/1.5 var(--mono); color: var(--accent); }
+    .reference-content { min-width: 0; }
+    .reference-content h3 { margin: 0; color: var(--ink); font-family: var(--serif); font-size: 21px; font-weight: 400; letter-spacing: -.012em; line-height: 1.4; text-wrap: pretty; overflow-wrap: break-word; }
+    .citation-details { margin: 9px 0 0; color: var(--text); font-size: 12px; line-height: 1.65; }
+    .annotation { margin: 10px 0 0; font-size: 13px; line-height: 1.75; color: var(--muted); }
+    .source-block { margin-top: 16px; padding: 12px 35px 13px 14px; border-left: 2px solid #b3c7c7; border-radius: 0 3px 3px 0; background: var(--link-bg); position: relative; }
+    .source-label { display: block; margin-bottom: 4px; color: #5a7076; font-size: 9px; line-height: 1.5; letter-spacing: .15em; text-transform: uppercase; font-weight: 700; }
+    .source-url { display: block; width: fit-content; max-width: 100%; font: 11.5px/1.8 var(--mono); color: var(--link); text-decoration: underline; text-decoration-color: #b4c7c9; text-underline-offset: 3px; overflow-wrap: anywhere; word-break: normal; }
+    .source-url:hover { text-decoration-color: currentColor; }
+    .external-icon { position: absolute; width: 14px; height: 14px; right: 13px; top: 15px; color: #71888e; pointer-events: none; }
+    .external-icon svg { display: block; width: 100%; height: 100%; }
+    .source-missing { background: #f4f0e9; border-left-color: #c4ab87; }
+    .source-missing .source-label { color: #806239; }
+    .missing-text { font-size: 12px; color: #776344; }
+    .empty-state { background: white; padding: 36px 25px; border: 1px solid var(--line); border-radius: 5px; }
+    .empty-state h3 { font: 25px/1.3 var(--serif); margin: 0 0 8px; color: var(--ink); }
+    .empty-state p { font-size: 13px; margin: 0 0 20px; }
+    .editorial-note { margin: 34px 0 0; padding: 18px 0 0; border-top: 1px solid var(--line); }
+    .editorial-note p { font-size: 11px; color: var(--muted); line-height: 1.85; margin: 7px 0 0; }
+    .editorial-note strong { color: var(--text); font-weight: 600; }
+    .page-footer { margin-top: 48px; padding: 22px 0 33px; border-top: 1px solid var(--line); display: flex; gap: 24px; justify-content: space-between; color: var(--muted); font-size: 11px; }
+    .page-footer p { margin: 0; }
+    .back-to-top { text-decoration: none; white-space: nowrap; color: var(--ink); }
+    .back-to-top:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .toast { position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); background: var(--ink); color: white; border-radius: 5px; padding: 12px 20px; box-shadow: 0 5px 25px #152c3526; font-size: 13px; width: max-content; max-width: calc(100% - 32px); text-align: center; z-index: 20; }
+    .noscript-note { font-size: 12px; margin: 0 0 25px; color: var(--muted); }
+    @media (min-width: 1450px) { .shell { width: 1180px; } .content-grid { gap: 52px; } }
+    @media (max-width: 950px) {
+      .shell { width: calc(100% - 56px); }
+      .hero { grid-template-columns: 1fr 185px; gap: 25px; }
+      .collection-meta { padding-left: 20px; }
+      .content-grid { grid-template-columns: 160px minmax(0, 1fr); gap: 25px; }
+      .reference-content h3 { font-size: 20px; }
+    }
+    @media (max-width: 740px) {
+      .shell { width: calc(100% - 40px); }
+      .masthead { padding: 20px 0; }
+      .masthead-meta { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 32px 0 28px; gap: 25px; }
+      h1 { font-size: 57px; }
+      .hero-subtitle { font-size: 25px; }
+      .hero-caption { font-size: 13px; }
+      .collection-meta { border-left: 0; border-top: 1px solid var(--line); padding: 18px 0 0; display: flex; align-items: center; gap: 24px; }
+      .collection-meta .meta-heading { margin: 0; max-width: 85px; font-size: 9px; }
+      .count-row { gap: 26px; }
+      .count-value { font-size: 29px; }
+      .count-label { font-size: 10px; margin-top: 2px; }
+      .meta-note { display: none; }
+      .toolbar { gap: 10px; margin-bottom: 26px; padding: 15px 0; }
+      .search-wrap { flex-basis: 100%; }
+      .toolbar-button { flex: 1; }
+      .content-grid { display: block; }
+      .sidebar { position: static; display: flex; gap: 15px; justify-content: space-between; align-items: baseline; padding: 0 0 20px; }
+      .sidebar-rule, .sidebar-text { display: none; }
+      .list-heading { margin-bottom: 12px; }
+      .reference-item { grid-template-columns: 29px minmax(0, 1fr); gap: 12px; padding: 23px 0; }
+      .reference-number { font-size: 13px; }
+      .reference-content h3 { font-size: 20px; }
+      .source-block { padding: 11px 26px 12px 11px; }
+      .source-url { font-size: 11px; line-height: 1.85; }
+      .external-icon { right: 8px; width: 12px; height: 12px; }
+      .page-footer { margin-top: 32px; }
+    }
+    @media (max-width: 370px) {
+      .shell { width: calc(100% - 30px); }
+      h1 { font-size: 49px; }
+      .hero-subtitle { font-size: 22px; }
+      .toolbar-button { padding-inline: 10px; }
+      .reference-content h3 { font-size: 19px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+    @page { size: A4; margin: 17mm 17mm 19mm; }
+    @media print {
+      body { background: white; font-size: 10pt; line-height: 1.5; color: black; }
+      .shell { width: 100%; max-width: none; }
+      .masthead { padding: 0 0 11pt; }
+      .brand-mark { width: 22pt; height: 26pt; font-size: 18pt; }
+      .brand-name { font-size: 8pt; }
+      .masthead-meta { font-size: 7pt; display: block; }
+      .hero { display: block; padding: 18pt 0 17pt; }
+      .eyebrow { font-size: 7.5pt; margin-bottom: 6pt; }
+      h1 { font-size: 37pt; margin-bottom: 6pt; }
+      .hero-subtitle { font-size: 17pt; }
+      .hero-caption { font-size: 9pt; margin-top: 8pt; }
+      .collection-meta, .toolbar, .sidebar, .back-to-top, .toast, .skip-link, .noscript-note, .external-icon, .empty-state, .result-count { display: none !important; }
+      .content-grid { display: block; }
+      .list-heading { margin: 0 0 8pt; }
+      .list-heading h2 { font-size: 8pt; }
+      .reference-list { border-top: 1px solid #aaa; }
+      .reference-item, .reference-item[hidden] { display: grid !important; grid-template-columns: 23pt minmax(0, 1fr); gap: 9pt; padding: 12pt 0; break-inside: avoid; page-break-inside: avoid; border-bottom-color: #c5c5c5; }
+      .reference-number { font-size: 9pt; padding-top: 1pt; color: #554733; }
+      .reference-content h3 { font-size: 12pt; line-height: 1.35; color: black; }
+      .citation-details { font-size: 8.5pt; margin-top: 5pt; color: #222; }
+      .annotation { font-size: 8.5pt; line-height: 1.5; margin-top: 5pt; color: #444; }
+      .source-block { margin-top: 7pt; padding: 0 0 0 7pt; background: transparent; border-left: 1px solid #aaa; }
+      .source-label { font-size: 6.5pt; margin-bottom: 2pt; color: #444; }
+      .source-url { font-size: 7.5pt; line-height: 1.55; color: black; text-decoration-color: #aaa; overflow-wrap: anywhere; }
+      .missing-text { font-size: 8pt; color: #444; }
+      .editorial-note { break-inside: avoid; margin-top: 16pt; padding-top: 8pt; }
+      .editorial-note .section-label { font-size: 7.5pt; }
+      .editorial-note p { font-size: 7.5pt; color: #444; }
+      .page-footer { margin-top: 15pt; padding: 10pt 0 0; font-size: 7pt; }
+      a::after { content: none !important; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#references">Skip to references</a>
+  <div class="shell">
+    <header class="masthead">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">R</span><span class="brand-name">Research reference collection</span></div>
+      <span class="masthead-meta">Translation &amp; measurement</span>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Bibliography &amp; source links</p>
+          <h1 id="page-title">References</h1>
+          <p class="hero-subtitle">Cross-cultural adaptation<br>&amp; measurement validation</p>
+          <p class="hero-caption">Studies, methodological resources, and linked materials on translation, cultural adaptation, and assessment tools.</p>
+        </div>
+        <aside class="collection-meta" aria-label="Collection overview">
+          <p class="meta-heading">Collection overview</p>
+          <div class="count-row">
+            <p><span class="count-value">23</span><span class="count-label">Reference entries</span></p>
+            <p><span class="count-value">22</span><span class="count-label">Source links</span></p>
+          </div>
+          <p class="meta-note">Full URLs included throughout.</p>
+        </aside>
+      </section>
+      <div class="toolbar" id="tools" aria-label="Reference tools" hidden>
+        <div class="search-wrap" role="search">
+          <label class="sr-only" for="reference-search">Search references by title, author, year, or URL</label>
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+          <input class="search" id="reference-search" type="search" placeholder="Search titles, authors, years, or URLs…" autocomplete="off" spellcheck="false" aria-controls="reference-list" aria-describedby="result-count">
+          <button class="clear-search" id="clear-search" type="button" aria-label="Clear search" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+        </div>
+        <button class="toolbar-button" id="copy-references" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M15 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3"/></svg><span>Copy references</span></button>
+        <button class="toolbar-button primary" id="print-references" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 8V3h10v5M7 16H4V9h16v7h-3"/><path d="M7 13h10v8H7zM17 11h1"/></svg><span>Print all</span></button>
+      </div>
+      <noscript><p class="noscript-note">All references are displayed below. Use your browser’s Print command to print this page.</p></noscript>
+      <div class="content-grid">
+        <aside class="sidebar" aria-label="About this collection">
+          <div><p class="section-label">Reference index</p><div class="sidebar-rule"></div></div>
+          <p class="sidebar-text">Browse the complete list. Every supplied <strong>source URL is displayed in full</strong> beneath its entry.</p>
+          <p class="sidebar-text">Links open in a new tab. Citation details are presented as supplied, not independently verified.</p>
+          <span class="range-label">01 — 23</span>
+        </aside>
+        <section class="list-area" id="references" aria-labelledby="references-heading">
+          <div class="list-heading"><h2 id="references-heading">Reference entries</h2><span class="result-count" id="result-count" role="status" aria-live="polite" aria-atomic="true">Showing all 23 references</span></div>
+          <ol class="reference-list" id="reference-list" role="list">
+<li class="reference-item" id="ref-1" aria-labelledby="ref-title-1">
+          <span class="reference-number" aria-label="Reference 1">01</span>
+          <article class="reference-content">
+            <h3 id="ref-title-1">Statistical validation in cultural adaptations of cognitive tests: A multi-regional systematic review.</h3>
+            <p class="citation-details">McAllister, M., Sayers, E., &amp; Mozolic-Stent, D. (2021). (Preprint)</p>
+            <p class="annotation">This recent review synthesizes methodological and statistical approaches in cross-cultural adaptation and validation across multiple regions.</p>
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://arxiv.org/abs/2504.13495" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2504.13495<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-2" aria-labelledby="ref-title-2">
+          <span class="reference-number" aria-label="Reference 2">02</span>
+          <article class="reference-content">
+            <h3 id="ref-title-2">Cross-cultural adaptation, validity, and reliability of the Persian version of the Spine Functional Index.</h3>
+            <p class="citation-details">Study · Health and Quality of Life Outcomes, 2018;16:95.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://hqlo.biomedcentral.com/articles/10.1186/s12955-018-0928-5" target="_blank" rel="noopener noreferrer">https://hqlo.biomedcentral.com/articles/10.1186/s12955-018-0928-5<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-3" aria-labelledby="ref-title-3">
+          <span class="reference-number" aria-label="Reference 3">03</span>
+          <article class="reference-content">
+            <h3 id="ref-title-3">Cross-Cultural Adaptation and Validation of the Brazilian Portuguese Version of an Observational Measure for Parent–Child Responsive Caregiving.</h3>
+            <p class="citation-details">International Journal of Environmental Research and Public Health, 2021, 18(3), 1246.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://doi.org/10.3390/ijerph18031246" target="_blank" rel="noopener noreferrer">https://doi.org/10.3390/ijerph18031246<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-4" aria-labelledby="ref-title-4">
+          <span class="reference-number" aria-label="Reference 4">04</span>
+          <article class="reference-content">
+            <h3 id="ref-title-4">Translation, cross-cultural adaptation and measurement properties of three implementation measures into Brazilian-Portuguese.</h3>
+            <p class="citation-details">Archives of Physiotherapy, (2025).</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://archivesphysiotherapy.biomedcentral.com/articles/10.1186/s40945-023-00160-x" target="_blank" rel="noopener noreferrer">https://archivesphysiotherapy.biomedcentral.com/articles/10.1186/s40945-023-00160-x<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-5" aria-labelledby="ref-title-5">
+          <span class="reference-number" aria-label="Reference 5">05</span>
+          <article class="reference-content">
+            <h3 id="ref-title-5">Cross-cultural adaptation, face validity and reliability of the Functional Mobility Assessment (FMA) into Brazilian Portuguese.</h3>
+            <p class="citation-details">(2020). PubMed ID: 32110165.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://pubmed.ncbi.nlm.nih.gov/32110165/" target="_blank" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov/32110165/<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-6" aria-labelledby="ref-title-6">
+          <span class="reference-number" aria-label="Reference 6">06</span>
+          <article class="reference-content">
+            <h3 id="ref-title-6">Cross-Cultural Adaptation of the Brazilian Portuguese Version of the Caregiver’s Feeding Styles Questionnaire (CFSQ).</h3>
+            <p class="citation-details">(2020). PubMed ID: 32796737.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://pubmed.ncbi.nlm.nih.gov/32796737/" target="_blank" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov/32796737/<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-7" aria-labelledby="ref-title-7">
+          <span class="reference-number" aria-label="Reference 7">07</span>
+          <article class="reference-content">
+            <h3 id="ref-title-7">Cross-cultural adaptation of the Activities of Daily Living Questionnaire–Brazil in Parkinson’s disease.</h3>
+            <p class="citation-details">(2021). PubMed ID: 34877983.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://pubmed.ncbi.nlm.nih.gov/34877983/" target="_blank" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov/34877983/<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-8" aria-labelledby="ref-title-8">
+          <span class="reference-number" aria-label="Reference 8">08</span>
+          <article class="reference-content">
+            <h3 id="ref-title-8">A practical approach to cross-cultural translation.</h3>
+            <p class="citation-details">Health and Quality of Life Outcomes, 7, 92.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://hqlo.biomedcentral.com/articles/10.1186/1477-7525-7-9" target="_blank" rel="noopener noreferrer">https://hqlo.biomedcentral.com/articles/10.1186/1477-7525-7-9<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-9" aria-labelledby="ref-title-9">
+          <span class="reference-number" aria-label="Reference 9">09</span>
+          <article class="reference-content">
+            <h3 id="ref-title-9">Cross-cultural testing.</h3>
+            <p class="citation-details">International Test Commission.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://www.intestcom.org/page/18" target="_blank" rel="noopener noreferrer">https://www.intestcom.org/page/18<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-10" aria-labelledby="ref-title-10">
+          <span class="reference-number" aria-label="Reference 10">10</span>
+          <article class="reference-content">
+            <h3 id="ref-title-10">SAGE Journals — linked reference</h3>
+            <p class="citation-details">Link-only entry; citation details were not supplied.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://journals.sagepub.com/doi/abs/10.1177/15394492211065190" target="_blank" rel="noopener noreferrer">https://journals.sagepub.com/doi/abs/10.1177/15394492211065190<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-11" aria-labelledby="ref-title-11">
+          <span class="reference-number" aria-label="Reference 11">11</span>
+          <article class="reference-content">
+            <h3 id="ref-title-11">SciELO — linked PDF</h3>
+            <p class="citation-details">Link-only entry; citation details were not supplied.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://www.scielo.br/j/cadbto/a/wVnVKZw8Hmh9BHHx6YStS6h/?format=pdf&amp;lang=en" target="_blank" rel="noopener noreferrer">https://www.scielo.br/j/cadbto/a/wVnVKZw8Hmh9BHHx6YStS6h/?format=pdf&amp;lang=en<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-12" aria-labelledby="ref-title-12">
+          <span class="reference-number" aria-label="Reference 12">12</span>
+          <article class="reference-content">
+            <h3 id="ref-title-12">Statistical Validation in Cultural Adaptations of Cognitive Tests (2025)</h3>
+            <p class="citation-details">Systematic review on cognitive test adaptations.</p>
+            <p class="annotation">Provides a framework highlighting the importance of translation and cultural adaptation as part of standardized tool development.</p>
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://arxiv.org/abs/2504.13495" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2504.13495<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-13" aria-labelledby="ref-title-13">
+          <span class="reference-number" aria-label="Reference 13">13</span>
+          <article class="reference-content">
+            <h3 id="ref-title-13">JMIR 2025 Study – Health-ITUES translation &amp; cultural adaptation into Chinese</h3>
+            
+            <p class="annotation">Shows necessity for adapting standardized usability evaluation scales for local language contexts.</p>
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://www.jmir.org/2025/1/e67948" target="_blank" rel="noopener noreferrer">https://www.jmir.org/2025/1/e67948<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-14" aria-labelledby="ref-title-14">
+          <span class="reference-number" aria-label="Reference 14">14</span>
+          <article class="reference-content">
+            <h3 id="ref-title-14">Translation and cross-cultural adaptation of the Beliefs About Losing Control Inventory (BALCI)–Italy</h3>
+            <p class="citation-details">Pardini et al. (2025).</p>
+            <p class="annotation">Example of standardized tool adapted using rigorous methods and CFA support.</p>
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://www.researchgate.net/publication/323766171_Translation_and_Cross-Cultural_Adaptation_of_Health_Assessment_Tools" target="_blank" rel="noopener noreferrer">https://www.researchgate.net/publication/323766171_Translation_and_Cross-Cultural_Adaptation_of_Health_Assessment_Tools<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-15" aria-labelledby="ref-title-15">
+          <span class="reference-number" aria-label="Reference 15">15</span>
+          <article class="reference-content">
+            <h3 id="ref-title-15">Cambridge Core — linked reference</h3>
+            <p class="citation-details">Link-only entry; citation details were not supplied.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://www.cambridge.org/core/journals/bjpsych-open/article/new-tool-for-assessing-the-cultural-adaptation-of-cognitive-tests-demonstrating-the-utility-of-the-manchester-translation-evaluation-checklist-mtec-through-the-minimental-state-examination-urdu/A2D8E93AF29CB317200F8025B0C4DB71" target="_blank" rel="noopener noreferrer">https://www.cambridge.org/core/journals/bjpsych-open/article/new-tool-for-assessing-the-cultural-adaptation-of-cognitive-tests-demonstrating-the-utility-of-the-manchester-translation-evaluation-checklist-mtec-through-the-minimental-state-examination-urdu/A2D8E93AF29CB317200F8025B0C4DB71<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-16" aria-labelledby="ref-title-16">
+          <span class="reference-number" aria-label="Reference 16">16</span>
+          <article class="reference-content">
+            <h3 id="ref-title-16">PubMed — record 40598461</h3>
+            <p class="citation-details">Link-only entry; citation details were not supplied.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://pubmed.ncbi.nlm.nih.gov/40598461/" target="_blank" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov/40598461/<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-17" aria-labelledby="ref-title-17">
+          <span class="reference-number" aria-label="Reference 17">17</span>
+          <article class="reference-content">
+            <h3 id="ref-title-17">Translation &amp; cross-cultural adaptation of the Falls Efficacy Scale-International into Urdu</h3>
+            <p class="citation-details">Khalid et al. (2025).</p>
+            <p class="annotation">Highlights the necessity of adapting standardized scales for accurate assessment in a non-native language setting.</p>
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://ojs.zu.edu.pk/pjr/article/view/1498" target="_blank" rel="noopener noreferrer">https://ojs.zu.edu.pk/pjr/article/view/1498<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-18" aria-labelledby="ref-title-18">
+          <span class="reference-number" aria-label="Reference 18">18</span>
+          <article class="reference-content">
+            <h3 id="ref-title-18">Translation and cross-cultural adaptation of Foot Function Index (FFI) in Urdu</h3>
+            <p class="citation-details">BMC Musculoskeletal Disorders (2024).</p>
+            <p class="annotation">Illustrates the need for translation and psychometric testing to ensure comprehension and validity.</p>
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://bmcmusculoskeletdisord.biomedcentral.com/articles/10.1186/s12891-024-07857-5" target="_blank" rel="noopener noreferrer">https://bmcmusculoskeletdisord.biomedcentral.com/articles/10.1186/s12891-024-07857-5<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-19" aria-labelledby="ref-title-19">
+          <span class="reference-number" aria-label="Reference 19">19</span>
+          <article class="reference-content">
+            <h3 id="ref-title-19">IJICC — linked PDF</h3>
+            <p class="citation-details">Link-only entry; citation details were not supplied.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://www.ijicc.net/images/Vol_15/Iss_6/15651_Noor_2021_E1_R.pdf" target="_blank" rel="noopener noreferrer">https://www.ijicc.net/images/Vol_15/Iss_6/15651_Noor_2021_E1_R.pdf<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-20" aria-labelledby="ref-title-20">
+          <span class="reference-number" aria-label="Reference 20">20</span>
+          <article class="reference-content">
+            <h3 id="ref-title-20">Translation and cross-cultural adaptation: a critical step in multi-national survey studies</h3>
+            <p class="citation-details">Benlidayi &amp; Gupta (2024).</p>
+            <p class="annotation">Emphasizes translation’s role in ensuring broader applicability and validity of survey tools.</p>
+            <div class="source-block source-missing"><span class="source-label">Source link</span><span class="missing-text">No URL was supplied for this entry.</span></div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-21" aria-labelledby="ref-title-21">
+          <span class="reference-number" aria-label="Reference 21">21</span>
+          <article class="reference-content">
+            <h3 id="ref-title-21">PubMed Central — record PMC11666326</h3>
+            <p class="citation-details">Link-only entry; citation details were not supplied.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11666326/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC11666326/<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-22" aria-labelledby="ref-title-22">
+          <span class="reference-number" aria-label="Reference 22">22</span>
+          <article class="reference-content">
+            <h3 id="ref-title-22">Translation and cultural adaptation of tools to assess diverse Asian populations</h3>
+            <p class="citation-details">Alzheimer’s &amp; Dementia Journal (2025).</p>
+            <p class="annotation">Discusses barriers in clinical research and healthcare when assessment tools are not linguistically appropriate, stressing the importance of translation for equitable health measurement.</p>
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.70311?af=R" target="_blank" rel="noopener noreferrer">https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.70311?af=R<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+<li class="reference-item" id="ref-23" aria-labelledby="ref-title-23">
+          <span class="reference-number" aria-label="Reference 23">23</span>
+          <article class="reference-content">
+            <h3 id="ref-title-23">PubMed — record 34971327</h3>
+            <p class="citation-details">Link-only entry; citation details were not supplied.</p>
+            
+            <div class="source-block">
+                <span class="source-label">Source link</span>
+                <a class="source-url" href="https://pubmed.ncbi.nlm.nih.gov/34971327/" target="_blank" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov/34971327/<span class="sr-only"> (opens in a new tab)</span></a>
+                <span class="external-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></svg></span>
+              </div>
+          </article>
+        </li>
+          </ol>
+          <div class="empty-state" id="empty-state" hidden>
+            <h3>No matching references</h3><p>Try a different title, author, year, or source URL.</p>
+            <button class="toolbar-button" id="reset-search" type="button">Show all references</button>
+          </div>
+          <aside class="editorial-note" aria-label="Editorial note">
+            <h2 class="section-label">About this list</h2>
+            <p>Reference entries have been numbered sequentially. Supplied titles, bibliographic details, descriptions, repeated entries, and URL-only entries have been retained. Link-only entries have descriptive source labels, not verified article titles.</p>
+            <p><strong>This is a presentation of the supplied references, not a verified bibliography.</strong> Authors, publication dates, article titles, and title–link matches have not been independently checked. One entry did not include a URL.</p>
+          </aside>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer"><p>Cross-cultural adaptation &amp; measurement validation</p><a class="back-to-top" href="#top">Back to top ↑</a></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+  <script id="citation-data" type="application/json">[{"title": "Statistical validation in cultural adaptations of cognitive tests: A multi-regional systematic review.", "details": "McAllister, M., Sayers, E., & Mozolic-Stent, D. (2021). (Preprint)", "description": "This recent review synthesizes methodological and statistical approaches in cross-cultural adaptation and validation across multiple regions.", "url": "https://arxiv.org/abs/2504.13495", "citation": "McAllister, M., Sayers, E., & Mozolic-Stent, D. (2021). Statistical validation in cultural adaptations of cognitive tests: A multi-regional systematic review. (Preprint) — this recent review synthesizes methodological and statistical approaches in cross-cultural adaptation and validation across multiple regions."}, {"title": "Cross-cultural adaptation, validity, and reliability of the Persian version of the Spine Functional Index.", "details": "Study · Health and Quality of Life Outcomes, 2018;16:95.", "url": "https://hqlo.biomedcentral.com/articles/10.1186/s12955-018-0928-5", "citation": "Study: Cross-cultural adaptation, validity, and reliability of the Persian version of the Spine Functional Index. Health and Quality of Life Outcomes, 2018;16:95."}, {"title": "Cross-Cultural Adaptation and Validation of the Brazilian Portuguese Version of an Observational Measure for Parent–Child Responsive Caregiving.", "details": "International Journal of Environmental Research and Public Health, 2021, 18(3), 1246.", "url": "https://doi.org/10.3390/ijerph18031246", "citation": "Cross-Cultural Adaptation and Validation of the Brazilian Portuguese Version of an Observational Measure for Parent–Child Responsive Caregiving. International Journal of Environmental Research and Public Health, 2021, 18(3), 1246."}, {"title": "Translation, cross-cultural adaptation and measurement properties of three implementation measures into Brazilian-Portuguese.", "details": "Archives of Physiotherapy, (2025).", "url": "https://archivesphysiotherapy.biomedcentral.com/articles/10.1186/s40945-023-00160-x", "citation": "Translation, cross-cultural adaptation and measurement properties of three implementation measures into Brazilian-Portuguese. Archives of Physiotherapy, (2025)."}, {"title": "Cross-cultural adaptation, face validity and reliability of the Functional Mobility Assessment (FMA) into Brazilian Portuguese.", "details": "(2020). PubMed ID: 32110165.", "url": "https://pubmed.ncbi.nlm.nih.gov/32110165/", "citation": "Cross-cultural adaptation, face validity and reliability of the Functional Mobility Assessment (FMA) into Brazilian Portuguese. (2020). PubMed ID: 32110165."}, {"title": "Cross-Cultural Adaptation of the Brazilian Portuguese Version of the Caregiver’s Feeding Styles Questionnaire (CFSQ).", "details": "(2020). PubMed ID: 32796737.", "url": "https://pubmed.ncbi.nlm.nih.gov/32796737/", "citation": "Cross-Cultural Adaptation of the Brazilian Portuguese Version of the Caregiver’s Feeding Styles Questionnaire (CFSQ). (2020). PubMed ID: 32796737."}, {"title": "Cross-cultural adaptation of the Activities of Daily Living Questionnaire–Brazil in Parkinson’s disease.", "details": "(2021). PubMed ID: 34877983.", "url": "https://pubmed.ncbi.nlm.nih.gov/34877983/", "citation": "Cross-cultural adaptation of the Activities of Daily Living Questionnaire–Brazil in Parkinson’s disease. (2021). PubMed ID: 34877983."}, {"title": "A practical approach to cross-cultural translation.", "details": "Health and Quality of Life Outcomes, 7, 92.", "url": "https://hqlo.biomedcentral.com/articles/10.1186/1477-7525-7-9", "citation": "A practical approach to cross-cultural translation. Health and Quality of Life Outcomes, 7, 92."}, {"title": "Cross-cultural testing.", "details": "International Test Commission.", "url": "https://www.intestcom.org/page/18", "citation": "Cross-cultural testing. International Test Commission."}, {"title": "SAGE Journals — linked reference", "details": "Link-only entry; citation details were not supplied.", "url": "https://journals.sagepub.com/doi/abs/10.1177/15394492211065190", "citation": ""}, {"title": "SciELO — linked PDF", "details": "Link-only entry; citation details were not supplied.", "url": "https://www.scielo.br/j/cadbto/a/wVnVKZw8Hmh9BHHx6YStS6h/?format=pdf&lang=en", "citation": ""}, {"title": "Statistical Validation in Cultural Adaptations of Cognitive Tests (2025)", "details": "Systematic review on cognitive test adaptations.", "description": "Provides a framework highlighting the importance of translation and cultural adaptation as part of standardized tool development.", "url": "https://arxiv.org/abs/2504.13495", "citation": "Statistical Validation in Cultural Adaptations of Cognitive Tests (2025) – Systematic review on cognitive test adaptations – Provides a framework highlighting the importance of translation and cultural adaptation as part of standardized tool development."}, {"title": "JMIR 2025 Study – Health-ITUES translation & cultural adaptation into Chinese", "details": "", "description": "Shows necessity for adapting standardized usability evaluation scales for local language contexts.", "url": "https://www.jmir.org/2025/1/e67948", "citation": "JMIR 2025 Study – Health-ITUES translation & cultural adaptation into Chinese – Shows necessity for adapting standardized usability evaluation scales for local language contexts."}, {"title": "Translation and cross-cultural adaptation of the Beliefs About Losing Control Inventory (BALCI)–Italy", "details": "Pardini et al. (2025).", "description": "Example of standardized tool adapted using rigorous methods and CFA support.", "url": "https://www.researchgate.net/publication/323766171_Translation_and_Cross-Cultural_Adaptation_of_Health_Assessment_Tools", "citation": "Pardini et al. (2025) – Translation and cross-cultural adaptation of the Beliefs About Losing Control Inventory (BALCI)–Italy – Example of standardized tool adapted using rigorous methods and CFA support."}, {"title": "Cambridge Core — linked reference", "details": "Link-only entry; citation details were not supplied.", "url": "https://www.cambridge.org/core/journals/bjpsych-open/article/new-tool-for-assessing-the-cultural-adaptation-of-cognitive-tests-demonstrating-the-utility-of-the-manchester-translation-evaluation-checklist-mtec-through-the-minimental-state-examination-urdu/A2D8E93AF29CB317200F8025B0C4DB71", "citation": ""}, {"title": "PubMed — record 40598461", "details": "Link-only entry; citation details were not supplied.", "url": "https://pubmed.ncbi.nlm.nih.gov/40598461/", "citation": ""}, {"title": "Translation & cross-cultural adaptation of the Falls Efficacy Scale-International into Urdu", "details": "Khalid et al. (2025).", "description": "Highlights the necessity of adapting standardized scales for accurate assessment in a non-native language setting.", "url": "https://ojs.zu.edu.pk/pjr/article/view/1498", "citation": "Khalid et al. (2025) – Translation & cross-cultural adaptation of the Falls Efficacy Scale-International into Urdu – Highlights the necessity of adapting standardized scales for accurate assessment in a non-native language setting."}, {"title": "Translation and cross-cultural adaptation of Foot Function Index (FFI) in Urdu", "details": "BMC Musculoskeletal Disorders (2024).", "description": "Illustrates the need for translation and psychometric testing to ensure comprehension and validity.", "url": "https://bmcmusculoskeletdisord.biomedcentral.com/articles/10.1186/s12891-024-07857-5", "citation": "BMC Musculoskeletal Disorders (2024) – Translation and cross-cultural adaptation of Foot Function Index (FFI) in Urdu – Illustrates the need for translation and psychometric testing to ensure comprehension and validity."}, {"title": "IJICC — linked PDF", "details": "Link-only entry; citation details were not supplied.", "url": "https://www.ijicc.net/images/Vol_15/Iss_6/15651_Noor_2021_E1_R.pdf", "citation": ""}, {"title": "Translation and cross-cultural adaptation: a critical step in multi-national survey studies", "details": "Benlidayi & Gupta (2024).", "description": "Emphasizes translation’s role in ensuring broader applicability and validity of survey tools.", "url": null, "citation": "Benlidayi & Gupta (2024) – Translation and cross-cultural adaptation: a critical step in multi-national survey studies – Emphasizes translation’s role in ensuring broader applicability and validity of survey tools."}, {"title": "PubMed Central — record PMC11666326", "details": "Link-only entry; citation details were not supplied.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11666326/", "citation": ""}, {"title": "Translation and cultural adaptation of tools to assess diverse Asian populations", "details": "Alzheimer’s & Dementia Journal (2025).", "description": "Discusses barriers in clinical research and healthcare when assessment tools are not linguistically appropriate, stressing the importance of translation for equitable health measurement.", "url": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.70311?af=R", "citation": "Alzheimer’s & Dementia Journal (2025) – Translation and cultural adaptation of tools to assess diverse Asian populations — Discusses barriers in clinical research and healthcare when assessment tools are not linguistically appropriate, stressing the importance of translation for equitable health measurement."}, {"title": "PubMed — record 34971327", "details": "Link-only entry; citation details were not supplied.", "url": "https://pubmed.ncbi.nlm.nih.gov/34971327/", "citation": ""}]</script>
+  <script>
+    (() => {
+      'use strict';
+      const input = document.getElementById('reference-search');
+      const clearButton = document.getElementById('clear-search');
+      const count = document.getElementById('result-count');
+      const empty = document.getElementById('empty-state');
+      const toast = document.getElementById('toast');
+      const records = JSON.parse(document.getElementById('citation-data').textContent);
+      const items = Array.from(document.querySelectorAll('.reference-item'));
+      const normalize = (text) => text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase();
+      const searchable = items.map((item) => normalize(item.textContent));
+      let toastTimer;
+      document.getElementById('tools').hidden = false;
+
+      function filterReferences() {
+        const query = normalize(input.value.trim());
+        const terms = query.split(/\s+/).filter(Boolean);
+        let shown = 0;
+        items.forEach((item, index) => {
+          const match = terms.every((term) => searchable[index].includes(term));
+          item.hidden = !match;
+          if (match) shown += 1;
+        });
+        count.textContent = query ? `Showing ${shown} of ${items.length} references` : `Showing all ${items.length} references`;
+        empty.hidden = shown !== 0;
+        clearButton.hidden = input.value.length === 0;
+      }
+      function resetSearch() {
+        input.value = '';
+        filterReferences();
+        input.focus();
+      }
+      function notify(message) {
+        window.clearTimeout(toastTimer);
+        toast.textContent = message;
+        toast.hidden = false;
+        toastTimer = window.setTimeout(() => { toast.hidden = true; }, 4000);
+      }
+      function legacyCopy(text) {
+        const field = document.createElement('textarea');
+        field.value = text;
+        field.readOnly = true;
+        field.style.position = 'fixed';
+        field.style.top = '0';
+        field.style.left = '-9999px';
+        document.body.appendChild(field);
+        const previous = document.activeElement;
+        field.select();
+        field.setSelectionRange(0, field.value.length);
+        let copied = false;
+        try { copied = document.execCommand('copy'); } catch (_) { copied = false; }
+        field.remove();
+        if (previous && typeof previous.focus === 'function') previous.focus();
+        return copied;
+      }
+      input.addEventListener('input', filterReferences);
+      input.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') { event.preventDefault(); resetSearch(); }
+      });
+      clearButton.addEventListener('click', resetSearch);
+      document.getElementById('reset-search').addEventListener('click', resetSearch);
+      document.getElementById('print-references').addEventListener('click', () => window.print());
+      document.getElementById('copy-references').addEventListener('click', async () => {
+        const text = 'REFERENCES\n\n' + records.map((record, index) => {
+          const body = [record.citation, record.url].filter(Boolean).join('\n');
+          return `${index + 1}. ${body}`;
+        }).join('\n\n');
+        let copied = false;
+        if (navigator.clipboard && window.isSecureContext) {
+          try { await navigator.clipboard.writeText(text); copied = true; } catch (_) { /* Local files may require the fallback. */ }
+        }
+        if (!copied) copied = legacyCopy(text);
+        notify(copied ? 'All 23 references copied with source URLs.' : 'Clipboard access is unavailable. Select the reference text and copy it manually.');
+      });
+    })();
+  </script>
+</body>
+</html>

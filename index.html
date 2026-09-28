@@ -106,7 +106,15 @@
     .back-to-top:hover { text-decoration: underline; text-underline-offset: 3px; }
     .toast { position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); background: var(--ink); color: white; border-radius: 5px; padding: 12px 20px; box-shadow: 0 5px 25px #152c3526; font-size: 13px; width: max-content; max-width: calc(100% - 32px); text-align: center; z-index: 20; }
     .noscript-note { font-size: 12px; margin: 0 0 25px; color: var(--muted); }
-    @media (min-width: 1450px) { .shell { width: 1180px; } .content-grid { gap: 52px; } }
+    @media screen and (min-width: 1700px) {
+      body { zoom: 1.5; }
+      .shell { width: min(1152px, calc(100% - 96px)); }
+      .content-grid { gap: 38px; }
+    }
+    @media screen and (min-width: 1450px) and (max-width: 1699px) {
+      .shell { width: 1180px; }
+      .content-grid { gap: 52px; }
+    }
     @media (max-width: 950px) {
       .shell { width: calc(100% - 56px); }
       .hero { grid-template-columns: 1fr 185px; gap: 25px; }
